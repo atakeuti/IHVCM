@@ -1762,21 +1762,6 @@ namespace HumanVentricularCell
             OpenFileDialog sfd = new OpenFileDialog();
             string strCurrentDir = System.Environment.CurrentDirectory;
 
-
-            // Init file exist \IHVCM\HumanVentricularCell\InitFiles\HumanVentricularCell.asc
-            //
-
-            DirectoryInfo di = new DirectoryInfo(strCurrentDir); //parrent
-            DirectoryInfo diParent = di.Parent;
-            strCurrentDir = diParent.FullName;
-            DirectoryInfo di2 = new DirectoryInfo(strCurrentDir); //parrent2
-            DirectoryInfo di2Parent = di2.Parent;
-            strCurrentDir = di2Parent.FullName;
-            DirectoryInfo di3 = new DirectoryInfo(strCurrentDir); //parrent3  now project folder
-            DirectoryInfo di3Parent = di3.Parent;
-            strCurrentDir = di3Parent.FullName;
-
-
             Pd.NameTV(Cell.TVcStr);
 
             if (Rbtn_DefaultInitFile.Checked == true)
