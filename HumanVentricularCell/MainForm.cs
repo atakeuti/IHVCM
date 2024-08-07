@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -1760,6 +1761,17 @@ namespace HumanVentricularCell
             string FNametemp;
             OpenFileDialog sfd = new OpenFileDialog();
             string strCurrentDir = System.Environment.CurrentDirectory;
+
+            DirectoryInfo di = new DirectoryInfo(strCurrentDir); //parrent
+            DirectoryInfo diParent = di.Parent;
+            strCurrentDir = diParent.FullName;
+            DirectoryInfo di2 = new DirectoryInfo(strCurrentDir); //parrent2
+            DirectoryInfo di2Parent = di2.Parent;
+            strCurrentDir = di2Parent.FullName;
+            DirectoryInfo di3 = new DirectoryInfo(strCurrentDir); //parrent3  now project folder
+            DirectoryInfo di3Parent = di3.Parent;
+            strCurrentDir = di3Parent.FullName;
+
 
             Pd.NameTV(Cell.TVcStr);
 
