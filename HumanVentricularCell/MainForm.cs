@@ -1774,6 +1774,18 @@ namespace HumanVentricularCell
             DirectoryInfo di3Parent = di3.Parent;
             strCurrentDir = di3Parent.FullName;
 
+            strCurrentDir = di2Parent.FullName;
+            DirectoryInfo di3 = new DirectoryInfo(strCurrentDir); //parrent3  now project folder
+            DirectoryInfo di3Parent = di3.Parent;
+            strCurrentDir = di3Parent.FullName;
+
+
+            strCurrentDir = di2Parent.FullName;
+            DirectoryInfo di3 = new DirectoryInfo(strCurrentDir); //parrent3  now project folder
+            DirectoryInfo di3Parent = di3.Parent;
+            strCurrentDir = di3Parent.FullName;
+
+
             Pd.NameTV(Cell.TVcStr);
 
             if (Rbtn_DefaultInitFile.Checked == true)
