@@ -329,12 +329,6 @@ namespace HumanVentricularCell
         // NHE
         private Pd.TIdx IxJ_NHE;
 
-        // CHE, newly added on 24Feb08
-        private Pd.TIdx IxJ_HCXmit;
-        //////private Pd.TIdx IxF_HCXmit;
-
-        // Cabuffmit
-
         // Extramitochondrial processes
         // AK
         private Pd.TIdx IxJ_AK;
@@ -739,12 +733,6 @@ namespace HumanVentricularCell
         private double KH_NHE = 0.0000001; // mM
         private double KH_reg_NHE = 0.0000757; // mM
         public double J_NHE; // mM/msec
-
-        // HCXmit
-        private double Vmax_HCXmit = 0.0;
-        private double KCa_HCXmit = 4.8E-3;
-        public double J_HCXmit; // mM/msec
-        public double F_HCXmit;
 
         // Cabuffmit
         private double KdCabuffmit = 0.001;
@@ -1692,21 +1680,6 @@ namespace HumanVentricularCell
             J_NHE = nume / denom;
             myCell.TVc[Pd.InxJ_NHE] = J_NHE;
         }
-        void HCXmit(double dt, ref double[] tvDYdt, ref double[] tvY, cCell myCell)
-        {
-            double Cao = tvY[Pd.IdxCai];
-            double Cam = myCell.TVc[Pd.InxCamit];
-            double Ho = tvY[Pd.IdxHcyt];
-            double Hm = tvY[Pd.IdxHmit];
-            double nume = Vmax_HCXmit * (Ho * Ho * Cam - Hm * Hm * Cao);
-            double denom = KCa_HCXmit * (Ho * Ho + Hm * Hm) + Ho * Ho * Cam + Hm * Hm * Cao;
-
-            J_HCXmit = -nume / denom;
-            F_HCXmit = J_HCXmit * Vmit;
-
-            myCell.TVc[Pd.InxJ_HCXmit] = J_HCXmit;
-            myCell.TVc[Pd.InxF_HCXmit] = F_HCXmit;
-        }
 
         void Cabuffmit(double dt, ref double[] tvDYdt, ref double[] tvY, cCell myCell)
         {
@@ -1886,7 +1859,6 @@ namespace HumanVentricularCell
             SetIx(ref IxF_NmSC_block, ref i, Pd.IntVar, "F_NmSC_cyt");
             SetIx(ref IxdATPuse_NmSC, ref i, Pd.IntVar, "dATPuse_NmSC");
             SetIx(ref IxJ_NHE, ref i, Pd.IntVar, "J_NHE");
-            SetIx(ref IxJ_HCXmit, ref i, Pd.IntVar, "J_HCXmit"); // 24Feb08
             SetIx(ref IxJ_AK, ref i, Pd.IntVar, "J_AK");
             SetIx(ref IxJ_CK, ref i, Pd.IntVar, "J_CK");
 
@@ -2001,7 +1973,6 @@ namespace HumanVentricularCell
             F_NmSC_block = myTVc[Pd.InxF_NmSC_block];
             dATPuse_NmSC = myTVc[Pd.InxdATPuse_NmSC];
             J_NHE = myTVc[Pd.InxJ_NHE];
-            J_HCXmit = myTVc[Pd.InxJ_HCXmit]; // 24Feb08
             J_AK = myTVc[Pd.InxJ_AK];
             J_CK = myTVc[Pd.InxJ_CK];
         }
@@ -2044,7 +2015,6 @@ namespace HumanVentricularCell
             NCXmit(dt, ref tvDYdt, ref tvY, myCell);
             NmSC(dt, ref tvDYdt, ref tvY, myCell);
             NHE(dt, ref tvDYdt, ref tvY, myCell);
-            HCXmit(dt, ref tvDYdt, ref tvY, myCell);
 
             // cytoplasm
             tvDYdt[Pd.IdxHcyt] = 0.0;
@@ -2108,10 +2078,10 @@ namespace HumanVentricularCell
 
             tvDYdt[Pd.IdxNamit] = (-n_NCXmit * (J_NmSC + J_NmSC_block + J_NCXmit) - J_NHE);
             tvDYdt[Pd.IdxKmit] = (J_KUni - J_KHE);
-            tvDYdt[Pd.IdxCamitTot] = J_CaUni_js + J_CaUni_cyt + J_NmSC + J_NmSC_block + J_NCXmit + J_HCXmit; // 24Feb09
+            tvDYdt[Pd.IdxCamitTot] = J_CaUni_js + J_CaUni_cyt + J_NmSC + J_NmSC_block + J_NCXmit;
             tvDYdt[Pd.IdxHmit] = (-4.0 * J_C1 - 2.0 * J_C3 - 4.0 * J_C4 - J_C1 +
                                    (nA_ATPsyn - 1) * J_ATPsyn + 2.0 * J_PiC + J_HLeak
-                                   + J_KHE + J_NHE - 2 * J_HCXmit - J_AGC + J_MCT + J_TCT + J_CS + J_MDH) / R_Buff; // 24Feb09
+                                   + J_KHE + J_NHE - J_AGC + J_MCT + J_TCT + J_CS + J_MDH) / R_Buff; 
             tvDYdt[Pd.IdxATPmitTotal] = (J_ATPsyn - J_ANT - J_PC - J_NDK);
             tvDYdt[Pd.IdxPImit] = (J_PiC - J_ATPsyn - J_DCT + J_PC - J_SCS);
             tvDYdt[Pd.IdxNADH] = (-J_C1 + J_PDHC + J_ICDH + J_OGDH + J_MDH);
@@ -2456,8 +2426,7 @@ namespace HumanVentricularCell
             ListView.LVDispValue("Mit", IxJ_NmSC_block, ref J_NmSC_block);
             ListView.LVDispValue("Mit", IxF_NmSC_block, ref F_NmSC_block);
             ListView.LVDispValue("Mit", IxdATPuse_NmSC, ref dATPuse_NmSC);
-            ListView.LVDispValue("Mit", IxJ_NHE, ref J_NHE);
-            ListView.LVDispValue("Mit", IxJ_HCXmit, ref J_HCXmit); // 24Feb08
+            ListView.LVDispValue("Mit", IxJ_NHE, ref J_NHE);           
             ListView.LVDispValue("Mit", IxJ_AK, ref J_AK);
             ListView.LVDispValue("Mit", IxJ_CK, ref J_CK);
         }
@@ -2603,8 +2572,7 @@ namespace HumanVentricularCell
             ListView.LVModiValue("Mit", IxJ_NmSC_block, ref J_NmSC_block);
             ListView.LVModiValue("Mit", IxF_NmSC_block, ref F_NmSC_block);
             ListView.LVModiValue("Mit", IxdATPuse_NmSC, ref dATPuse_NmSC);
-            ListView.LVModiValue("Mit", IxJ_NHE, ref J_NHE);
-            ListView.LVModiValue("Mit", IxJ_HCXmit, ref J_HCXmit); // 24Feb08
+            ListView.LVModiValue("Mit", IxJ_NHE, ref J_NHE);           
             ListView.LVModiValue("Mit", IxJ_AK, ref J_AK);
             ListView.LVModiValue("Mit", IxJ_CK, ref J_CK);
         }

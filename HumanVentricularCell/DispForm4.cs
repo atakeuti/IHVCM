@@ -62,26 +62,26 @@ namespace HumanVentricularCell
 
         override public void DispLabels(cCell myCell)
         {
-            //************************************************************************
-            ucPicBox1.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxINaCasl_Itc]);
-            ucPicBox1.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxINaKsl_Itc]);
-            ucPicBox1.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIK1sl_Itc]);
+            ////************************************************************************
+            //ucPicBox1.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxINaCasl_Itc]);
+            //ucPicBox1.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxINaKsl_Itc]);
+            //ucPicBox1.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIK1sl_Itc]);
 
-            //************************************************************************
-            ucPicBox2.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxItossl_Itc]);
-            ucPicBox2.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxItofsl_Itc]);
-            ucPicBox2.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIClCasl_Itc]);
+            ////************************************************************************
+            //ucPicBox2.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxItossl_Itc]);
+            //ucPicBox2.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxItofsl_Itc]);
+            //ucPicBox2.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIClCasl_Itc]);
 
-            //************************************************************************
-            ucPicBox3.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxINasl_Itc]);
-            ucPicBox3.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIKpsl_Itc]);
-            ucPicBox3.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIpCasl_Itc]);
-            ucPicBox3.lbl_Var4.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxICabsl_Itc]);
+            ////************************************************************************
+            //ucPicBox3.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxINasl_Itc]);
+            //ucPicBox3.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIKpsl_Itc]);
+            //ucPicBox3.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIpCasl_Itc]);
+            //ucPicBox3.lbl_Var4.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxICabsl_Itc]);
 
-            //************************************************************************
-            ucPicBox3.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIKrsl_Itc]);
-            ucPicBox3.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIKssl_Itc]);
-            ucPicBox3.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxICaLsl_Itc]);
+            ////************************************************************************
+            //ucPicBox3.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIKrsl_Itc]);
+            //ucPicBox3.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxIKssl_Itc]);
+            //ucPicBox3.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxICaLsl_Itc]);
 
         }
 

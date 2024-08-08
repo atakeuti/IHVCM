@@ -8,19 +8,19 @@ namespace HumanVentricularCell
 {
     public class cElement
     {
-        protected Pd.TIdx IxDensity;
+        //protected Pd.TIdx IxDensity;
         protected Pd.TIdx IxItc;
         protected Pd.TIdx IxSF;
-        protected Pd.TIdx IxFlux;
+        //protected Pd.TIdx IxFlux;
 
-        public double Density;
+        //public double Density;
         public double SF;	//'Scaling factor
         public double Itc;      // total current
-        public double Flux;
+        //public double Flux;
         protected int NumOfIx;
         public Pd.TIons Ic;
         public Pd.TIons Fx;
-        protected Pd.TIons P; ////relative permeability
+        //protected Pd.TIons P; ////relative permeability
         protected ucListView ListTemp;
 
         public cElement()  //Constructor 

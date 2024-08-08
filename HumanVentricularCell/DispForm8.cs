@@ -58,27 +58,27 @@ namespace HumanVentricularCell
 
         override public void DispLabels(cCell myCell)
         {
-            //************************************************************************           
-            ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.IdxATPiTotal].ToString("0.000E0");
-            ucPicBox1.lbl_Var2.Text = myCell.TVc[Pd.IdxPCr].ToString("0.000E0");
-            ucPicBox1.lbl_Var3.Text = myCell.TVc[Pd.InxCr].ToString("0.000E0");
-            ucPicBox1.lbl_Var4.Text = myCell.TVc[Pd.IdxPIi].ToString("0.000E0");
+            ////************************************************************************           
+            //ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.IdxATPiTotal].ToString("0.000E0");
+            //ucPicBox1.lbl_Var2.Text = myCell.TVc[Pd.IdxPCr].ToString("0.000E0");
+            //ucPicBox1.lbl_Var3.Text = myCell.TVc[Pd.InxCr].ToString("0.000E0");
+            //ucPicBox1.lbl_Var4.Text = myCell.TVc[Pd.IdxPIi].ToString("0.000E0");
 
-            //************************************************************************
-            ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.InxJ_KUni].ToString("0.0E0");
-            ucPicBox2.lbl_Var2.Text = myCell.TVc[Pd.InxJ_KHE].ToString("0.0E0");
+            ////************************************************************************
+            //ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.InxJ_KUni].ToString("0.0E0");
+            //ucPicBox2.lbl_Var2.Text = myCell.TVc[Pd.InxJ_KHE].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.InxJNmSC].ToString("0.0E0");
-            //ucPicBox3.lbl_Var2.Text = myCell.TVc[Pd.InxJNCXmit].ToString("0.0E0");
-            //ucPicBox3.lbl_Var3.Text = myCell.TVc[Pd.InxJCaUni_js].ToString("0.0E0");
-            //ucPicBox3.lbl_Var4.Text = myCell.TVc[Pd.InxJCaUni_cyt].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.InxJNmSC].ToString("0.0E0");
+            ////ucPicBox3.lbl_Var2.Text = myCell.TVc[Pd.InxJNCXmit].ToString("0.0E0");
+            ////ucPicBox3.lbl_Var3.Text = myCell.TVc[Pd.InxJCaUni_js].ToString("0.0E0");
+            ////ucPicBox3.lbl_Var4.Text = myCell.TVc[Pd.InxJCaUni_cyt].ToString("0.0E0");
 
-            //************************************************************************
-            ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.InxJ_PDHC].ToString("0.0E0");
-            ucPicBox4.lbl_Var2.Text = myCell.TVc[Pd.InxJ_ICDH].ToString("0.0E0");
-            ucPicBox4.lbl_Var3.Text = myCell.TVc[Pd.InxJ_OGDH].ToString("0.0E0");
-            ucPicBox4.lbl_Var4.Text = myCell.TVc[Pd.InxJ_MDH].ToString("0.0E0");
+            ////************************************************************************
+            //ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.InxJ_PDHC].ToString("0.0E0");
+            //ucPicBox4.lbl_Var2.Text = myCell.TVc[Pd.InxJ_ICDH].ToString("0.0E0");
+            //ucPicBox4.lbl_Var3.Text = myCell.TVc[Pd.InxJ_OGDH].ToString("0.0E0");
+            //ucPicBox4.lbl_Var4.Text = myCell.TVc[Pd.InxJ_MDH].ToString("0.0E0");
         }
         override public void SendImageBmpToPbox()
         {

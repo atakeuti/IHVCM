@@ -56,22 +56,22 @@ namespace HumanVentricularCell
 
         override public void DispLabels(cCell myCell)
         {
-            //************************************************************************
-            ucPicBox1.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_SERCA]);
-            ucPicBox1.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_RyR]);
-            ucPicBox1.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_Leak]);
+            ////************************************************************************
+            //ucPicBox1.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_SERCA]);
+            //ucPicBox1.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_RyR]);
+            //ucPicBox1.lbl_Var3.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_Leak]);
 
-            //************************************************************************
-            ucPicBox2.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_CaUni_js]);
-            ucPicBox2.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_CaUni_cyt]);
+            ////************************************************************************
+            //ucPicBox2.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_CaUni_js]);
+            //ucPicBox2.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_CaUni_cyt]);
 
 
-            //************************************************************************
-            ucPicBox3.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_NmSC]);
-            ucPicBox3.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_NCXmit]);
+            ////************************************************************************
+            //ucPicBox3.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_NmSC]);
+            //ucPicBox3.lbl_Var2.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.InxJ_NCXmit]);
 
-            //************************************************************************
-            //ucPicBox4.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.IdxdPsi]);
+            ////************************************************************************
+            ////ucPicBox4.lbl_Var1.Text = String.Format("{0,6:#.#0}", myCell.TVc[Pd.IdxdPsi]);
         }
 
         override public void SendImageBmpToPbox()

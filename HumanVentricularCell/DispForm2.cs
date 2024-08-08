@@ -29,8 +29,8 @@ namespace HumanVentricularCell
             ucPicBox2.PlotSimData(SimTime, myCell.TVc[Pd.InxCamit] * 1000, ref ucPicBox2.myPoint[0], BlnFirstPlot_LDisp);
 
             ucPicBox3.PlotSimData(SimTime, myCell.TVc[Pd.IdxNai], ref ucPicBox3.myPoint[0], BlnFirstPlot_LDisp);
-            ucPicBox3.PlotSimData(SimTime, myCell.TVc[Pd.IdxNajs], ref ucPicBox3.myPoint[1], BlnFirstPlot_LDisp);
-            ucPicBox3.PlotSimData(SimTime, myCell.TVc[Pd.IdxNasl], ref ucPicBox3.myPoint[2], BlnFirstPlot_LDisp);
+           // ucPicBox3.PlotSimData(SimTime, myCell.TVc[Pd.IdxNajs], ref ucPicBox3.myPoint[1], BlnFirstPlot_LDisp);
+           // ucPicBox3.PlotSimData(SimTime, myCell.TVc[Pd.IdxNasl], ref ucPicBox3.myPoint[2], BlnFirstPlot_LDisp);
 
             //************************************************************************
             ucPicBox4.PlotSimData(SimTime, myCell.TVc[Pd.InxFb], ref ucPicBox4.myPoint[0], BlnFirstPlot_LDisp);
@@ -52,27 +52,27 @@ namespace HumanVentricularCell
 
         override public void DispLabels(cCell myCell)
         {
-            //************************************************************************
-            //ucPicBox1.lbl_Var1.Text = myCell.SR.Casr.ToString("0.0E0");
-            ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.IdxCasr].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox1.lbl_Var1.Text = myCell.SR.Casr.ToString("0.0E0");
+            //ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.IdxCasr].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox2.lbl_Var1.Text = myCell.Mitochondria.Camit.ToString("0.0E0");
-            ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.InxCamit].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox2.lbl_Var1.Text = myCell.Mitochondria.Camit.ToString("0.0E0");
+            //ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.InxCamit].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox3.lbl_Var1.Text = myCell.Cyt.Nai.ToString("0.0E0");
-            //ucPicBox3.lbl_Var2.Text = myCell.JS.Najs.ToString("0.0E0");
-            //ucPicBox3.lbl_Var3.Text = myCell.SL.Nasl.ToString("0.0E0");
-            ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.IdxNai].ToString("0.0E0");
-            ucPicBox3.lbl_Var2.Text = myCell.TVc[Pd.IdxNajs].ToString("0.0E0");
-            ucPicBox3.lbl_Var3.Text = myCell.TVc[Pd.IdxNasl].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox3.lbl_Var1.Text = myCell.Cyt.Nai.ToString("0.0E0");
+            ////ucPicBox3.lbl_Var2.Text = myCell.JS.Najs.ToString("0.0E0");
+            ////ucPicBox3.lbl_Var3.Text = myCell.SL.Nasl.ToString("0.0E0");
+            //ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.IdxNai].ToString("0.0E0");
+            ////ucPicBox3.lbl_Var2.Text = myCell.TVc[Pd.IdxNajs].ToString("0.0E0");
+            ////ucPicBox3.lbl_Var3.Text = myCell.TVc[Pd.IdxNasl].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox4.lbl_Var1.Text = myCell.Contraction.Fb.ToString("0.0E0");
-            //ucPicBox4.lbl_Var2.Text = myCell.Contraction.Twitch.ToString("0.0E0");
-            ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.InxFb].ToString("0.0E0");
-            ucPicBox4.lbl_Var2.Text = myCell.TVc[Pd.InxTwitch].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox4.lbl_Var1.Text = myCell.Contraction.Fb.ToString("0.0E0");
+            ////ucPicBox4.lbl_Var2.Text = myCell.Contraction.Twitch.ToString("0.0E0");
+            //ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.InxFb].ToString("0.0E0");
+            //ucPicBox4.lbl_Var2.Text = myCell.TVc[Pd.InxTwitch].ToString("0.0E0");
         }
 
 
@@ -96,8 +96,8 @@ namespace HumanVentricularCell
 
             //************************************************************************
             ucPicBox3.lbl_Var1Str.Text = "Nai";
-            ucPicBox3.lbl_Var2Str.Text = "Najs";
-            ucPicBox3.lbl_Var3Str.Text = "Nasl";
+            //ucPicBox3.lbl_Var2Str.Text = "Najs";
+            //ucPicBox3.lbl_Var3Str.Text = "Nasl";
             ucPicBox3.txb_Ymax.Text = "9.0";
             ucPicBox3.txb_Ymin.Text = "8.0";
 

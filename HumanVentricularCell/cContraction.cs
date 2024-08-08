@@ -30,7 +30,6 @@ namespace HumanVentricularCell
 
         private Pd.TIdx IxJ_Ca_contraction;
         private Pd.TIdx IxdATPuse_contraction;
-        //////private Pd.TIdx IxYd;
 
         private Pd.TIdx IxTrnCa;
         private Pd.TIdx IxTrnCa_cb;
@@ -50,7 +49,7 @@ namespace HumanVentricularCell
         public double b_cm = 0.054;        //Rate Constant of Z1   [/ms]
         public double f_cm = 0.0000851;        //Rate Constant of Y2   [/ms]
         public double g_cm = 0.000649;        //Rate Constant of Z2   [/ms]
-        public double B_eff = -0.001887;       //Rate Constant of dXdt [um /ms] // originally -1.887 by Shim et al., 2007, but shoudl be 1/1000
+        public double B_eff = -0.001887;       //Rate Constant of dXdt [um /ms] 
         public double h_c = 0.005;      //equilibrium length of the cross bridge [um]
 
         public double A_Fb = 380000.0;        //coefficient of Fb  [mN /mm^2 /um /mM troponin concentration] 
@@ -209,7 +208,7 @@ namespace HumanVentricularCell
 
             if (MainForm.BlnSProtocolOn == false)  //
             {
-                EL = MainForm.ExternalLoad; // EL0;  //EL0は間違い 24Mar23
+                EL = MainForm.ExternalLoad; 
                 Externalload_ = EL;
             }
             else  //EL protocol

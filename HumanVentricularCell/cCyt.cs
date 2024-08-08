@@ -78,7 +78,7 @@ namespace HumanVentricularCell
             Cabuffcyt.dydt(dt, ref tvDYdt, ref tvY, myCell);
 
             tvDYdt[Pd.IdxCai] = -(myCell.SR.SERCA.F_SERCA
-                + myCell.Mitochondria.F_CaUni_cyt + myCell.Mitochondria.F_NmSC_block + myCell.Mitochondria.F_NCXmit + myCell.Mitochondria.F_HCXmit) / Vcyt
+                + myCell.Mitochondria.F_CaUni_cyt + myCell.Mitochondria.F_NmSC_block + myCell.Mitochondria.F_NCXmit ) / Vcyt
                 - Cabuffcyt.J_Cabuff_cyt_tot
                 + myCell.Contraction.J_Ca_contraction 
                 + myCell.Cadiff_cytsl.J_Cadif_cytsl / Vcyt; 

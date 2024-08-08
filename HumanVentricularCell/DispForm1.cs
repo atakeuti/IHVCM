@@ -50,23 +50,23 @@ namespace HumanVentricularCell
 
         override public void DispLabels(cCell myCell)
         {
-            //************************************************************************           
-            //ucPicBox1.lbl_Var1.Text = myCell.Vm.ToString("0.0E0");
-            ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.IdxVm].ToString("0.0E0");
+            ////************************************************************************           
+            ////ucPicBox1.lbl_Var1.Text = myCell.Vm.ToString("0.0E0");
+            //ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.IdxVm].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox2.lbl_Var1.Text = myCell.Cyt.Cai.ToString("0.0E0");
-            ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.IdxCai].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox2.lbl_Var1.Text = myCell.Cyt.Cai.ToString("0.0E0");
+            //ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.IdxCai].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox3.lbl_Var1.Text = myCell.JS.Cajs.ToString("0.0E0");
-            //ucPicBox3.lbl_Var2.Text = myCell.SL.Casl.ToString("0.0E0");
-            ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.IdxCajs].ToString("0.0E0");
-            ucPicBox3.lbl_Var2.Text = myCell.TVc[Pd.IdxCasl].ToString("0.0E0");
+            ////************************************************************************
+            ////ucPicBox3.lbl_Var1.Text = myCell.JS.Cajs.ToString("0.0E0");
+            ////ucPicBox3.lbl_Var2.Text = myCell.SL.Casl.ToString("0.0E0");
+            //ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.IdxCajs].ToString("0.0E0");
+            //ucPicBox3.lbl_Var2.Text = myCell.TVc[Pd.IdxCasl].ToString("0.0E0");
 
-            //************************************************************************
-            //ucPicBox4.lbl_Var1.Text = myCell.Contraction.hsmL.ToString("0.0E0");
-            ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.IdxhsmL].ToString("0.000E0");
+            ////************************************************************************
+            ////ucPicBox4.lbl_Var1.Text = myCell.Contraction.hsmL.ToString("0.0E0");
+            //ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.IdxhsmL].ToString("0.000E0");
         }
 
         private void DispForm1_Load(object sender, EventArgs e)

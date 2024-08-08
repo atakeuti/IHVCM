@@ -16,10 +16,9 @@ namespace HumanVentricularCell
         public double KmKo = 1.5; // mM
         public double KmNai = 11.0; // mM
 
-        // 24Mar05
         //public double ANaK = 1.8; // pA/pF for ventricular cell
         public double ANaK = 0.9 * 1.8; // =1.62 pA/pF for ventricular cell
-        // 24Mar14 beta-AR stimulation was incorporated according to Kurata et al., Front Physiol, 2020
+        // beta-AR stimulation was incorporated according to Kurata et al., Front Physiol, 2020
         public double ANaK_;
 
         public double dATPuse_INaKjs;

@@ -49,18 +49,18 @@ namespace HumanVentricularCell
 
         override public void DispLabels(cCell myCell)
         {
-            //************************************************************************           
-            ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.InxpHmit].ToString("0.000E0");
-            ucPicBox1.lbl_Var2.Text = myCell.TVc[Pd.InxpHcyt].ToString("0.000E0");
+            ////************************************************************************           
+            //ucPicBox1.lbl_Var1.Text = myCell.TVc[Pd.InxpHmit].ToString("0.000E0");
+            //ucPicBox1.lbl_Var2.Text = myCell.TVc[Pd.InxpHcyt].ToString("0.000E0");
 
-            //************************************************************************
-            ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.IdxNADH].ToString("0.000E0");
+            ////************************************************************************
+            //ucPicBox2.lbl_Var1.Text = myCell.TVc[Pd.IdxNADH].ToString("0.000E0");
 
-            //************************************************************************
-            ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.IdxKmit].ToString("0.000E0");
+            ////************************************************************************
+            //ucPicBox3.lbl_Var1.Text = myCell.TVc[Pd.IdxKmit].ToString("0.000E0");
 
-            //************************************************************************
-            ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.IdxNamit].ToString("0.000E0");
+            ////************************************************************************
+            //ucPicBox4.lbl_Var1.Text = myCell.TVc[Pd.IdxNamit].ToString("0.000E0");
         }
         override public void SendImageBmpToPbox()
         {

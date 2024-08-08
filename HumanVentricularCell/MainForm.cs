@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -1424,7 +1425,6 @@ namespace HumanVentricularCell
                 InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_NmSC], "J_NmSC");
                 InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_NmSC_block], "J_NmSC_block");
                 InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_NHE], "J_NHE");
-                InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_HCXmit], "J_HCXmit"); // 24Feb08
                 InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_AK], "J_AK");
                 InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_CK], "J_CK");
                 InputmTV(++i, SamplCount, Cell.TVc[Pd.InxJ_cons], "J_cons");
@@ -1550,7 +1550,6 @@ namespace HumanVentricularCell
                 InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_NmSC], "J_NmSC");
                 InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_NmSC_block], "J_NmSC_block");
                 InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_NHE], "J_NHE");
-                InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_HCXmit], "J_HCXmit");
                 InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_AK], "J_AK");
                 InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_CK], "J_CK");
                 InputmTVbeat(++i, SamplCount, Cell.TVc[Pd.InxJ_cons], "J_cons");
@@ -1759,7 +1758,19 @@ namespace HumanVentricularCell
         {
             string FNametemp;
             OpenFileDialog sfd = new OpenFileDialog();
-            string strCurrentDir = System.Environment.CurrentDirectory;
+            string strCurrentDir = System.Environment.CurrentDirectory;  //  \IHVCM\HumanVentricularCell\bin\x64\Debug
+
+            // Init file exists in \IHVCM\HumanVentricularCell\InitFiles\HumanVentricularCell.asc
+
+            DirectoryInfo di = new DirectoryInfo(strCurrentDir);
+            DirectoryInfo diParent = di.Parent;
+            strCurrentDir = diParent.FullName;                    //parrent  \IHVCM\HumanVentricularCell\bin\x64 
+            DirectoryInfo di2 = new DirectoryInfo(strCurrentDir);
+            DirectoryInfo di2Parent = di2.Parent;
+            strCurrentDir = di2Parent.FullName;                   //parrent2  \IHVCM\HumanVentricularCell\bin
+            DirectoryInfo di3 = new DirectoryInfo(strCurrentDir);
+            DirectoryInfo di3Parent = di3.Parent;
+            strCurrentDir = di3Parent.FullName;                   //parrent3  \IHVCM\HumanVentricularCell
 
             Pd.NameTV(Cell.TVcStr);
 
